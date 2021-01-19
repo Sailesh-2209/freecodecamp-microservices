@@ -4,6 +4,7 @@
 	"description": "Free code camp, APIs and Microservices",
 	"keywords": ["freecodecamp", "learn", "API", "microservices"],
 	"license": "MIT",
+	"version": "1.1.0",
 	"heroku-app-url": "https://fcc-mircroservices.herokuapp.com/",
 	"dependencies": {
 		"express": "^4.14.0"
