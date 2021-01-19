@@ -1,6 +1,8 @@
 {
 	"name": "fcc-learn-npm-package-json",
 	"author": "sailesh",
+	"description": "Free code camp, APIs and Microservices",
+	"heroku-app-url": "https://fcc-mircroservices.herokuapp.com/",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
