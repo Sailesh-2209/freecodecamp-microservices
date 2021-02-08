@@ -18,12 +18,12 @@ app.use("/", express.static(__dirname + "/public"));
 app.use("/json", (req, res) => {
   if (messageStyle === 'uppercase') {
     res.json({
-      "message": "hello json".toUpperCase()
+      "message": "Hello World".toUpperCase()
     });
   }
   else {
     res.json({
-      "message": "Hello Json"
+      "message": "Hello World"
     });
   }
 });
