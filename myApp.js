@@ -30,6 +30,14 @@ app.get(
   }
 );
 
+app.get("/:word/echo", (req, res, next) => {
+  let word = req.params.word;
+  res.json({
+    echo: word,
+  });
+  next();
+});
+
 app.use("/", express.static(__dirname + "/public"));
 app.use("/json", (req, res) => {
   if (process.env.MESSAGE_STYLE === "uppercase") {
