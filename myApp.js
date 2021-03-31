@@ -38,6 +38,20 @@ app.get("/:word/echo", (req, res, next) => {
   next();
 });
 
+// app.get("/name", (req, res, next) => {})
+app
+  .route("/name")
+  .get((req, res, next) => {
+    let response = req.query["firstname"] + " " + req.query["lastname"];
+    res.json({
+      name: response,
+    });
+    next();
+  })
+  .post((req, res, next) => {
+    next();
+  });
+
 app.use("/", express.static(__dirname + "/public"));
 app.use("/json", (req, res) => {
   if (process.env.MESSAGE_STYLE === "uppercase") {
