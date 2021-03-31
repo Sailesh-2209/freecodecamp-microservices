@@ -42,7 +42,7 @@ app.get("/:word/echo", (req, res, next) => {
 app
   .route("/name")
   .get((req, res, next) => {
-    let response = req.query["firstname"] + " " + req.query["lastname"];
+    let response = req.query["first"] + " " + req.query["last"];
     res.json({
       name: response,
     });
