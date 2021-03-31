@@ -53,6 +53,10 @@ app
     next();
   })
   .post((req, res, next) => {
+    let response = req.body["first"] + " " + req.body["last"];
+    res.json({
+      name: response,
+    });
     next();
   });
 
