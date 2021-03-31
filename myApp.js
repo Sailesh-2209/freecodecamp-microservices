@@ -1,4 +1,5 @@
 var express = require("express");
+var bodyParser = require("body-parser");
 var app = express();
 require("dotenv").config();
 
@@ -7,6 +8,9 @@ console.log("Hello World");
 // app.get("/", (req, res) => {
 //   res.send("Hello Express");
 // });
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
